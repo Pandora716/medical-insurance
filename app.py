@@ -40,7 +40,7 @@ t3.markdown(" **tel:** 025-83106666 **| website:** http://www.njglyy.com **| ema
 with st.spinner('Total Statistcs Reporting...'):
     c1, c2, c3, c4, c5 = st.columns((1,1,1,1,1))
     
-    todf = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/Feb28/DataforMock.xlsx',sheet_name = 'Metrics2')
+    todf = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/medical-insurance/medical-insurance/DataforMock.xlsx',sheet_name = 'Metrics2')
     v1 = todf[(todf['科室']=='全部') & (todf['metrics']== '医保交易')]   
     v2 = todf[(todf['科室']=='全部') & (todf['metrics']== '医疗费用')]   
     v3 = todf[(todf['科室']=='全部') & (todf['metrics']== '医保结算')] 
@@ -100,12 +100,12 @@ with st.spinner('Total Statistcs Reporting...'):
 with st.spinner('Updating Report...'):
     
     #Metrics setting and rendering
-    dep_df = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/Feb28/DataforMock.xlsx',sheet_name = 'Department')
+    dep_df = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/medical-insurance/medical-insurance/DataforMock.xlsx',sheet_name = 'Department')
     dep = st.selectbox('选择科室', dep_df)
     
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
-    todf = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/Feb28/DataforMock.xlsx',sheet_name = 'Metrics2')
+    todf = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/medical-insurance/medical-insurance/DataforMock.xlsx',sheet_name = 'Metrics2')
     to = todf[(todf['科室']==dep) & (todf['metrics']== '医保交易')]   
     ch = todf[(todf['科室']==dep) & (todf['metrics']== '医疗费用')]   
     hl = todf[(todf['科室']==dep) & (todf['metrics']== '医保结算')]
@@ -120,7 +120,7 @@ with st.spinner('Updating Report...'):
     
     e1.write('')
     
-    chdf = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/Feb28/DataforMock.xlsx',sheet_name = 'overview') 
+    chdf = pd.read_excel('C:/Users/Pandora/Desktop/南京医保/medical-insurance/medical-insurance/DataforMock.xlsx',sheet_name = 'overview') 
     
     chdf = chdf[chdf['科室']==dep]
     
