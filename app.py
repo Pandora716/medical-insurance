@@ -6,20 +6,13 @@ Created on Thu Mar  3 13:33:27 2022
 """
 
 import streamlit as st
-import time
 import numpy as np
 import pandas as pd
-import json
-import plotly.express as px
 import plotly.graph_objects as go
 from pyecharts import options as opts
-from pyecharts.commons.utils import JsCode
 from pyecharts.faker import Faker
-from pyecharts.charts import Bar, Grid, Line, Pie, Tab, Page, Scatter, Map, Funnel, Geo, Sankey, WordCloud
-from pyecharts.components import Table
-import matplotlib.pyplot as plt
-from pyecharts.options import ComponentTitleOpts
-from pyecharts.globals import ThemeType, GeoType, SymbolType
+from pyecharts.charts import Bar, Line, Pie, WordCloud
+from pyecharts.globals import ThemeType,SymbolType
 import streamlit_echarts as st_echarts
 import streamlit as st
 import plotly.graph_objects as go
@@ -275,8 +268,8 @@ with st.expander("患者画像"):
         st_echarts.st_pyecharts(d2)
     
 
-with st.expander("医保支出预测"):
-    r1, r2 = st.columns((1,1))
+# with st.expander("医保支出预测"):
+#     r1, r2 = st.columns((1,1))
     
     
     
